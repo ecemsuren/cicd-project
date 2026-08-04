@@ -1,14 +1,16 @@
 name: CD - Deployment Pipeline
 
 on:
-  push:
-    branches: [ "development", "master" ]
+  workflow_run:
+    workflows: ["Android CI"]
+    types:
+      - completed
 
 jobs:
 
   build-dev-apk:
     name: Build Dev APK
-    if: github.ref == 'refs/heads/development'
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'development' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -36,7 +38,7 @@ jobs:
 
   build-prod-apk:
     name: Build Prod APK
-    if: github.ref == 'refs/heads/master'
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'master' }}
     runs-on: ubuntu-latest
 
     steps:
