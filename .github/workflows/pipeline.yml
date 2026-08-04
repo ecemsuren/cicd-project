@@ -1,4 +1,5 @@
-name: Pipeline
+# CI/CD Pipeline — Android Build, Test & Fastlane Deployment to Firebase
+name: CI/CD Pipeline
 
 on:
   push:
@@ -9,8 +10,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # ─── 1. TEST GATE ────────────────────────────────────
   test:
-    name: Test Gate
+    name: 🧪 Test Gate
     runs-on: ubuntu-latest
 
     steps:
@@ -30,9 +32,9 @@ jobs:
       - name: Run unit tests
         run: ./gradlew test --no-daemon
 
-
+  # DEPLOY DEV
   deploy-dev:
-    name: Deploy Dev Release APK
+    name: 🚀 Deploy Dev (Firebase)
     needs: test
     if: github.ref == 'refs/heads/development'
     runs-on: ubuntu-latest
@@ -51,17 +53,31 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build Dev Release APK
-        run: ./gradlew assembleDevRelease --no-daemon
-
-      - name: Upload Dev Release APK
-        uses: actions/upload-artifact@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          name: Dev-Release-APK
-          path: app/build/outputs/apk/dev/release/*.apk
+          ruby-version: '3.2'
+          bundler-cache: true
 
+      - name: Decode signing key
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > app/release-keystore.jks
+
+      - name: Decode Firebase Service Account
+        run: |
+          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" | base64 --decode > firebase-service-account.json
+
+      - name: Deploy to Firebase (Dev)
+        run: bundle exec fastlane android deploy_dev
+        env:
+          FIREBASE_APP_ID_DEV: ${{ secrets.FIREBASE_APP_ID_DEV }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+
+  # DEPLOY PROD
   deploy-prod:
-    name: Deploy Prod Release APK
+    name: 🚀 Deploy Prod (Firebase)
     needs: test
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
@@ -80,11 +96,24 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build Prod Release APK
-        run: ./gradlew assembleProdRelease --no-daemon
-
-      - name: Upload Prod Release APK
-        uses: actions/upload-artifact@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          name: Prod-Release-APK
-          path: app/build/outputs/apk/prod/release/*.apk
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Decode signing key
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > app/release-keystore.jks
+
+      - name: Decode Firebase Service Account
+        run: |
+          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" | base64 --decode > firebase-service-account.json
+
+      - name: Deploy to Firebase (Prod)
+        run: bundle exec fastlane android deploy_prod
+        env:
+          FIREBASE_APP_ID_PROD: ${{ secrets.FIREBASE_APP_ID_PROD }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
