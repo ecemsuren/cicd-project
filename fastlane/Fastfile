@@ -1,0 +1,37 @@
+default_platform(:android)
+
+platform :android do
+
+  desc "Build and Deploy Dev Release APK to Firebase App Distribution"
+  lane :deploy_dev do
+
+    gradle(
+      task: "assemble",
+      flavor: "dev",
+      build_type: "Release"
+    )
+
+    firebase_app_distribution(
+      app: ENV["FIREBASE_APP_ID_DEV"],
+      service_credentials_file: "firebase-service-account.json",
+      groups: "testers",
+      release_notes: "Dev Release Build from CI/CD Pipeline"
+    )
+  end
+
+  desc "Build and Deploy Prod Release APK to Firebase App Distribution"
+  lane :deploy_prod do
+    gradle(
+      task: "assemble",
+      flavor: "prod",
+      build_type: "Release"
+    )
+    firebase_app_distribution(
+      app: ENV["FIREBASE_APP_ID_PROD"],
+      service_credentials_file: "firebase-service-account.json",
+      groups: "stakeholders",
+      release_notes: "Prod Release Build from CI/CD Pipeline"
+    )
+  end
+
+end
