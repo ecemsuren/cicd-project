@@ -5,11 +5,7 @@ platform :android do
   desc "Build and Deploy Dev Release APK to Firebase App Distribution"
   lane :deploy_dev do
 
-    changelog = changelog_from_git_commits(
-      between: ["origin/development", "HEAD"],
-      pretty: "- %s",
-      merge_commit_filtering: "exclude_merges"
-    )
+    changelog = sh("git log --pretty=format:'- %s' --no-merges HEAD^1..HEAD^2").strip rescue sh("git log --pretty=format:'- %s' --no-merges -n 5").strip
 
     gradle(
       task: "assemble",
@@ -28,11 +24,7 @@ platform :android do
   desc "Build and Deploy Prod Release APK to Firebase App Distribution"
   lane :deploy_prod do
 
-    changelog = changelog_from_git_commits(
-      between: ["origin/master", "HEAD"],
-      pretty: "- %s",
-      merge_commit_filtering: "exclude_merges"
-    )
+    changelog = sh("git log --pretty=format:'- %s' --no-merges HEAD^1..HEAD^2").strip rescue sh("git log --pretty=format:'- %s' --no-merges -n 5").strip
 
     gradle(
       task: "assemble",
