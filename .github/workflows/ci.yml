@@ -71,7 +71,7 @@ jobs:
           target: google_apis
           script: ./gradlew connectedDevDebugAndroidTest --no-daemon
 
-  # 3. JOB: BUILD CHECKS
+  #  JOB: BUILD CHECKS
   build-checks:
     name: Build Checks
     runs-on: ubuntu-latest
