@@ -60,7 +60,7 @@ jobs:
       - name: Run UI Tests on Android Emulator
         uses: ReactiveCircus/android-emulator-runner@v2
         with:
-          api-level: 34
+          api-level: 30
           target: google_apis
           arch: x86_64
           script: ./gradlew connectedDevDebugAndroidTest --no-daemon
