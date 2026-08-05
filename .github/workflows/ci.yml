@@ -13,9 +13,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # 1. JOB: UNIT TESTS
+  #  JOB: UNIT TESTS
   unit-tests:
-    name: 🧪 Unit Tests (Dev & Prod)
+    name: Unit Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -38,34 +38,9 @@ jobs:
       - name: Run Prod Unit Tests
         run: ./gradlew testProdDebugUnitTest --no-daemon
 
-  # 2. JOB: BUILD CHECKS
-  build-checks:
-    name: 🛠️ Build Checks (Dev & Prod)
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-          cache: 'gradle'
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      - name: Build Dev Debug APK Check
-        run: ./gradlew assembleDevDebug --no-daemon
-
-      - name: Build Prod Debug APK Check
-        run: ./gradlew assembleProdDebug --no-daemon
-
-  # 3. JOB: UI TESTS (EMULATOR)
+  #  JOB: UI TESTS
   ui-tests:
-    name: 📱 UI Tests (Android 14 Emulator)
+    name: UI Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -89,3 +64,30 @@ jobs:
           target: google_apis
           arch: x86_64
           script: ./gradlew connectedDevDebugAndroidTest --no-daemon
+
+
+  #  JOB: BUILD CHECKS
+  build-checks:
+    name: Build Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build Dev Debug APK Check
+        run: ./gradlew assembleDevDebug --no-daemon
+
+      - name: Build Prod Debug APK Check
+        run: ./gradlew assembleProdDebug --no-daemon
+
