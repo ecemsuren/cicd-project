@@ -5,6 +5,8 @@ platform :android do
   desc "Build and Deploy Dev Release APK to Firebase App Distribution"
   lane :deploy_dev do
 
+    changelog = sh("git log --pretty=format:'- %s' --no-merges HEAD^1..HEAD^2").strip rescue sh("git log --pretty=format:'- %s' --no-merges -n 5").strip
+
     gradle(
       task: "assemble",
       flavor: "dev",
@@ -15,12 +17,14 @@ platform :android do
       app: ENV["FIREBASE_APP_ID_DEV"],
       service_credentials_file: "firebase-service-account.json",
       groups: "testers",
-      release_notes: "Dev Build (v1.0.#{ENV['BUILD_NUMBER']})"
+      release_notes: "Dev Build (v1.0.#{ENV['BUILD_NUMBER']})\n\nChanges in this release:\n#{changelog}"
     )
   end
 
   desc "Build and Deploy Prod Release APK to Firebase App Distribution"
   lane :deploy_prod do
+
+    changelog = sh("git log --pretty=format:'- %s' --no-merges HEAD^1..HEAD^2").strip rescue sh("git log --pretty=format:'- %s' --no-merges -n 5").strip
 
     gradle(
       task: "assemble",
@@ -32,7 +36,7 @@ platform :android do
       app: ENV["FIREBASE_APP_ID_PROD"],
       service_credentials_file: "firebase-service-account.json",
       groups: "stakeholders",
-      release_notes: "Prod Build (v1.0.#{ENV['BUILD_NUMBER']})"
+      release_notes: "Prod Build (v1.0.#{ENV['BUILD_NUMBER']})\n\nChanges in this release:\n#{changelog}"
     )
   end
 
