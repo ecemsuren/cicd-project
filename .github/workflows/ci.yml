@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   validate-pr:
-    name: 🧪 PR Validation (Dev & Prod)
+    name: PR Validation
     runs-on: ubuntu-latest
 
     steps:
