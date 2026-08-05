@@ -1,6 +1,6 @@
 # CI — Pull Request Check Pipeline
 # Runs on every Pull Request to development or master branches.
-# Validates code and unit tests for BOTH Dev and Prod environments before merging.
+# Validates code, unit tests, UI tests, and builds in separate jobs for clear PR status reporting.
 
 name: CI - PR Check
 
@@ -13,8 +13,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validate-pr:
-    name: PR Validation
+  # 1. JOB: UNIT TESTS
+  unit-tests:
+    name: 🧪 Unit Tests (Dev & Prod)
     runs-on: ubuntu-latest
 
     steps:
@@ -37,13 +38,24 @@ jobs:
       - name: Run Prod Unit Tests
         run: ./gradlew testProdDebugUnitTest --no-daemon
 
-      - name: Run UI Tests on Android Emulator
-        uses: ReactiveCircus/android-emulator-runner@v2
+  # 2. JOB: BUILD CHECKS
+  build-checks:
+    name: 🛠️ Build Checks (Dev & Prod)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
         with:
-          api-level: 34
-          target: google_apis
-          arch: x86_64
-          script: ./gradlew connectedDevDebugAndroidTest --no-daemon
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
       - name: Build Dev Debug APK Check
         run: ./gradlew assembleDevDebug --no-daemon
@@ -51,4 +63,29 @@ jobs:
       - name: Build Prod Debug APK Check
         run: ./gradlew assembleProdDebug --no-daemon
 
+  # 3. JOB: UI TESTS (EMULATOR)
+  ui-tests:
+    name: 📱 UI Tests (Android 14 Emulator)
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Run UI Tests on Android Emulator
+        uses: ReactiveCircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          script: ./gradlew connectedDevDebugAndroidTest --no-daemon
