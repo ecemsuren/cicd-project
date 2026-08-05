@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.ecemsuren.cicdproject.LoginScreenUiTest" tests="2" failures="0" errors="0" skipped="0" time="11.153" timestamp="2026-08-05T11:41:05" hostname="localhost">
+  <properties>
+    <property name="device" value="Medium_Phone_API_34(AVD) - 14" />
+    <property name="flavor" value="dev" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="loginScreen_emptyFields_showsErrors" classname="com.ecemsuren.cicdproject.LoginScreenUiTest" time="6.695" />
+  <testcase name="loginScreen_displaysAllElements" classname="com.ecemsuren.cicdproject.LoginScreenUiTest" time="2.432" />
+</testsuite>

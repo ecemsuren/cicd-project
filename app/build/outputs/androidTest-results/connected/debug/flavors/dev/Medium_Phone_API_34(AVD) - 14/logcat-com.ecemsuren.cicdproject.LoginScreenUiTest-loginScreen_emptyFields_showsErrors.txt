@@ -1,0 +1,167 @@
+08-05 14:40:54.586 20057 20078 I TestRunner: started: loginScreen_emptyFields_showsErrors(com.ecemsuren.cicdproject.LoginScreenUiTest)
+08-05 14:40:54.668 20057 20078 W FileTestStorage: Output properties is not supported.
+08-05 14:40:54.669 20057 20078 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+08-05 14:40:54.676 20057 20057 D EventInjectionStrategy: Creating injection strategy with input manager.
+08-05 14:40:54.676 20057 20057 W cicdproject.dev: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+08-05 14:40:54.678 20057 20057 W cicdproject.dev: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+08-05 14:40:54.679 20057 20057 W cicdproject.dev: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+08-05 14:40:54.694 20057 20057 W cicdproject.dev: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+08-05 14:40:54.694 20057 20057 W cicdproject.dev: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+08-05 14:40:54.695 20057 20057 W cicdproject.dev: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+08-05 14:40:54.696 20057 20078 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@3d56ef8]
+08-05 14:40:54.735 20057 20078 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+08-05 14:40:54.892   386   386 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+08-05 14:40:54.945   865   959 E OpenGLRenderer: Unable to match the desired swap behavior.
+08-05 14:40:55.283 20057 20057 W cicdproject.dev: Verification of android.os.Bundle androidx.lifecycle.SavedStateHandlesProvider.saveState() took 118.697ms (766.65 bytecodes/s) (3128B approximate peak alloc)
+08-05 14:40:55.294   865   865 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+08-05 14:40:55.497 20057 20082 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+08-05 14:40:55.529 20057 20082 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+08-05 14:40:55.532 20057 20082 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+08-05 14:40:55.602 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@e452ce6 in: PRE_ON_CREATE
+08-05 14:40:55.607 20057 20057 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+08-05 14:40:56.041 11709 11717 W ding:background: Suspending all threads took: 55.449ms
+08-05 14:40:56.093 14943 14967 W android.vending: Suspending all threads took: 229.489ms
+08-05 14:40:56.287 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@e452ce6 in: CREATED
+08-05 14:40:56.288 20057 20057 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.ecemsuren.cicdproject.MainActivity@e452ce6
+08-05 14:40:56.292 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@e452ce6 in: STARTED
+08-05 14:40:56.297 20057 20057 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.ecemsuren.cicdproject.MainActivity@e452ce6
+08-05 14:40:56.310 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@e452ce6 in: RESUMED
+08-05 14:40:56.311 20057 20057 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.ecemsuren.cicdproject.MainActivity@e452ce6
+08-05 14:40:56.334 18688 18708 D EGL_emulation: app_time_stats: avg=9170.61ms min=5228.56ms max=13112.66ms count=2
+08-05 14:40:56.353 20057 20057 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10217; state: DISABLED
+08-05 14:40:56.371 20057 20057 W OpenGLRenderer: Unknown dataspace 0
+08-05 14:40:56.645   865   865 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+08-05 14:40:56.658 20088 20088 I artd    : Starting artd
+08-05 14:40:56.660 20088 20088 I AidlLazyServiceRegistrar: Registering service artd
+08-05 14:40:56.715 20088 20089 I AidlLazyServiceRegistrar: Process has 1 (of 1 available) client(s) in use after notification artd has clients: 1
+08-05 14:40:56.754 20088 20089 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.dm': No such file or directory
+08-05 14:40:56.755 20088 20089 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.dm': No such file or directory
+08-05 14:40:56.755 20088 20089 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.dm': No such file or directory
+08-05 14:40:56.756 20088 20089 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.dm': No such file or directory
+08-05 14:40:56.759 20088 20089 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000005/GoogleCertificates.dm': No such file or directory
+08-05 14:40:56.759 20088 20089 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000005/GoogleCertificates.dm': No such file or directory
+08-05 14:40:56.766 20088 20089 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000008/dl-TfliteDynamiteDynamite.integ_260580502100400.dm': No such file or directory
+08-05 14:40:56.766 20088 20089 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000008/dl-TfliteDynamiteDynamite.integ_260580502100400.dm': No such file or directory
+08-05 14:40:56.775 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/0000000f/dl-Appsearch.optional_262634100400.dm': No such file or directory
+08-05 14:40:56.775 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/0000000f/dl-Appsearch.optional_262634100400.dm': No such file or directory
+08-05 14:40:56.786 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000010/dl-MlkitBarcodeUi.optional_262634100400.dm': No such file or directory
+08-05 14:40:56.786 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000010/dl-MlkitBarcodeUi.optional_262634100400.dm': No such file or directory
+08-05 14:40:56.788 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000000/AdsDynamite.dm': No such file or directory
+08-05 14:40:56.788 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000000/AdsDynamite.dm': No such file or directory
+08-05 14:40:56.791 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000012/dl-PlayCloudSearch.optional_262634100000.dm': No such file or directory
+08-05 14:40:56.792 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000012/dl-PlayCloudSearch.optional_262634100000.dm': No such file or directory
+08-05 14:40:56.799 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/0000000b/dl-MlkitOcrCommon.optional_262634100400.dm': No such file or directory
+08-05 14:40:56.799 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/0000000b/dl-MlkitOcrCommon.optional_262634100400.dm': No such file or directory
+08-05 14:40:56.803 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/0000000a/dl-VisionOcr.optional_262634100000.dm': No such file or directory
+08-05 14:40:56.803 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/0000000a/dl-VisionOcr.optional_262634100000.dm': No such file or directory
+08-05 14:40:56.811 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/0000000d/dl-IdentityCredentialsPlatform.optional_262634100400.dm': No such file or directory
+08-05 14:40:56.811 20088 20088 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/0000000d/dl-IdentityCredentialsPlatform.optional_262634100400.dm': No such file or directory
+08-05 14:40:56.815 20088 20088 W artd    : Could not get dex checksums for location /data/app/~~rhp-HKwbvPPx1GoR_BmuAQ==/com.android.vending-z8SyArwhOeqNEf5u9C22HQ==/base.apk, fd=-1
+08-05 14:40:57.176 20057 20057 W cicdproject.dev: Method boolean androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate(boolean, kotlin.jvm.functions.Function1) failed lock verification and will run slower.
+08-05 14:40:57.176 20057 20057 W cicdproject.dev: Common causes for lock verification issues are non-optimized dex code
+08-05 14:40:57.176 20057 20057 W cicdproject.dev: and incorrect proguard optimizations.
+08-05 14:40:57.177 20057 20057 W cicdproject.dev: Method boolean androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate$default(androidx.compose.runtime.snapshots.SnapshotStateList, boolean, kotlin.jvm.functions.Function1, int, java.lang.Object) failed lock verification and will run slower.
+08-05 14:40:57.177 20057 20057 W cicdproject.dev: Method java.lang.Object androidx.compose.runtime.snapshots.SnapshotStateList.mutate(kotlin.jvm.functions.Function1) failed lock verification and will run slower.
+08-05 14:40:57.177 20057 20057 W cicdproject.dev: Method void androidx.compose.runtime.snapshots.SnapshotStateList.update(boolean, kotlin.jvm.functions.Function1) failed lock verification and will run slower.
+08-05 14:40:57.178 20057 20057 W cicdproject.dev: Method void androidx.compose.runtime.snapshots.SnapshotStateList.update$default(androidx.compose.runtime.snapshots.SnapshotStateList, boolean, kotlin.jvm.functions.Function1, int, java.lang.Object) failed lock verification and will run slower.
+08-05 14:40:57.885 20057 20057 D CompatibilityChangeReporter: Compat change id reported: 289878283; UID 10217; state: ENABLED
+08-05 14:40:58.243 20057 20080 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+08-05 14:40:58.243 20057 20080 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+08-05 14:40:58.250   865   865 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+08-05 14:40:58.302   152   152 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+08-05 14:40:58.303 20057 20080 I Gralloc4: mapper 4.x is not supported
+08-05 14:40:58.327 20057 20080 E OpenGLRenderer: Unable to match the desired swap behavior.
+08-05 14:40:58.525 20057 20057 I Choreographer: Skipped 123 frames!  The application may be doing too much work on its main thread.
+08-05 14:40:58.553   522   538 W ziparchive: Unable to open '/data/app/~~yl4Pcp3G4h3kV8LiwV0D9g==/com.ecemsuren.cicdproject.dev-6kLDbZvxvhLHSYRMyiTXGQ==/base.dm': No such file or directory
+08-05 14:40:58.572   522   538 I ActivityTaskManager: Displayed com.ecemsuren.cicdproject.dev/com.ecemsuren.cicdproject.MainActivity for user 0: +3s785ms
+08-05 14:40:58.581   522  1240 I ImeTracker: com.ecemsuren.cicdproject.dev:a37b90f: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+08-05 14:40:58.582   522  1240 I ImeTracker: com.ecemsuren.cicdproject.dev:a37b90f: onCancelled at PHASE_SERVER_SHOULD_HIDE
+08-05 14:40:58.612 20057 20091 I OpenGLRenderer: Davey! duration=2091ms; Flags=1, FrameTimelineVsyncId=30261735, IntendedVsync=201778666970421, Vsync=201778666970421, InputEventId=0, HandleInputStart=201778676498175, AnimationStart=201778676506300, PerformTraversalsStart=201778676512259, DrawStart=201780586077843, FrameDeadline=201778683637087, FrameInterval=201778676432425, FrameStartTime=16666666, SyncQueued=201780623662093, SyncStart=201780624337010, IssueDrawCommandsStart=201780625252093, SwapBuffers=201780719739718, FrameCompleted=201780759597718, DequeueBufferDuration=7875, QueueBufferDuration=13473625, GpuCompleted=201780759336051, SwapBuffersCompleted=201780759597718, DisplayPresentTime=0, CommandSubmissionCompleted=201780719739718,
+08-05 14:40:58.732  9560  9560 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+08-05 14:40:58.751  9560  9560 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+08-05 14:40:58.751  9560  9560 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.ecemsuren.cicdproject.dev fieldId=0 fieldName=null extras=null}, false)
+08-05 14:40:58.751  9560  9560 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+08-05 14:40:58.757  9560  9560 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+08-05 14:40:58.872   709   721 I FontLog : (REDACTED) Received query %s, URI %s
+08-05 14:40:58.878   709   721 I FontLog : (REDACTED) Query [%s] resolved to %s
+08-05 14:40:58.898   865   959 D EGL_emulation: app_time_stats: avg=8029.87ms min=10.90ms max=31170.69ms count=4
+08-05 14:40:58.933   709   721 I FontLog : (REDACTED) Fetch %s end status %s
+08-05 14:40:58.941   865   959 D EGL_emulation: app_time_stats: avg=6159.74ms min=106.77ms max=17799.18ms count=3
+08-05 14:40:58.975   709   994 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+08-05 14:40:58.980   865   929 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@e441d85
+08-05 14:40:58.983   522  1240 W InputManager-JNI: Input channel object 'f26aa5f Splash Screen com.ecemsuren.cicdproject.dev (client)' was disposed without first being removed with the input manager!
+08-05 14:40:59.018   709   994 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+08-05 14:40:59.031   865   929 W FrameTracker: Missed App frame:UNKNOWN: 10, 30261822, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:40:59.031   865   929 W FrameTracker: Missed SF frame:UNKNOWN: 10, 30261822, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:40:59.031   865   929 W FrameTracker: Missing HWUI jank callback for vsyncId: 30261822, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:40:59.031   865   929 W FrameTracker: Missed App frame:UNKNOWN: 74, 30261836, 216497885, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:40:59.031   865   929 W FrameTracker: Missed SF frame:UNKNOWN: 74, 30261836, 216497885, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:40:59.032   865   929 W FrameTracker: Missed App frame:UNKNOWN: 74, 30261851, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:40:59.032   865   929 W FrameTracker: Missed SF frame:UNKNOWN: 74, 30261851, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:40:59.032   865   929 W FrameTracker: Missing HWUI jank callback for vsyncId: 30261851, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:40:59.032   865   929 W FrameTracker: Missed App frame:UNKNOWN: 88, 30261874, 184019265, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:40:59.032   865   929 W FrameTracker: Missed SF frame:UNKNOWN: 88, 30261874, 184019265, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:40:59.704   995   995 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.checkin.START pkg=com.google.android.gms }
+08-05 14:41:00.027  1697  2073 I AiAiEcho: Predicting[0]:
+08-05 14:41:00.027  1697  2073 I AiAiEcho: EchoTargets:
+08-05 14:41:00.027  1697  2073 I AiAiEcho: Filtered by AiAi flag check:
+08-05 14:41:00.027  1697  2073 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+08-05 14:41:00.042  1697  2073 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+08-05 14:41:00.060 20057 20080 D EGL_emulation: app_time_stats: avg=38.38ms min=3.99ms max=536.48ms count=36
+08-05 14:41:00.085   865   959 D EGL_emulation: app_time_stats: avg=128.84ms min=5.19ms max=690.44ms count=9
+08-05 14:41:00.151   865   865 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+08-05 14:41:00.187 20057 20057 I Choreographer: Skipped 56 frames!  The application may be doing too much work on its main thread.
+08-05 14:41:00.246 20057 20099 D ProfileInstaller: Installing profile for com.ecemsuren.cicdproject.dev
+08-05 14:41:00.376 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@e452ce6 in: PAUSED
+08-05 14:41:00.377 20057 20057 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.ecemsuren.cicdproject.MainActivity@e452ce6
+08-05 14:41:00.443   386   386 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+08-05 14:41:00.483   865   959 E OpenGLRenderer: Unable to match the desired swap behavior.
+08-05 14:41:00.502   349   349 D Zygote  : Forked child process 20101
+08-05 14:41:00.583 20101 20101 I roject.dev.test: Late-enabling -Xcheck:jni
+08-05 14:41:00.696 20101 20101 I roject.dev.test: Using CollectorTypeCC GC.
+08-05 14:41:00.757  2196  2224 I adbd    : jdwp connection from 20101
+08-05 14:41:00.890 20101 20101 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10220; state: ENABLED
+08-05 14:41:00.893 20101 20101 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10220; state: ENABLED
+08-05 14:41:00.913 20101 20101 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+08-05 14:41:00.919 20101 20101 D nativeloader: Configuring clns-6 for other apk /system/framework/android.test.mock.jar. target_sdk_version=35, uses_libraries=ALL, library_path=/data/app/~~y4kfb56jvCbLcFgH5O3z6g==/com.ecemsuren.cicdproject.dev.test-C_WjFGG2-fWx1GyHJn19DA==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.ecemsuren.cicdproject.dev.test
+08-05 14:41:00.920 20101 20101 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+08-05 14:41:00.925 20101 20101 D nativeloader: Configuring clns-7 for other apk /system/framework/android.test.runner.jar. target_sdk_version=35, uses_libraries=ALL, library_path=/data/app/~~y4kfb56jvCbLcFgH5O3z6g==/com.ecemsuren.cicdproject.dev.test-C_WjFGG2-fWx1GyHJn19DA==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.ecemsuren.cicdproject.dev.test
+08-05 14:41:00.927 20101 20101 W ziparchive: Unable to open '/data/app/~~y4kfb56jvCbLcFgH5O3z6g==/com.ecemsuren.cicdproject.dev.test-C_WjFGG2-fWx1GyHJn19DA==/base.dm': No such file or directory
+08-05 14:41:00.927 20101 20101 W ziparchive: Unable to open '/data/app/~~y4kfb56jvCbLcFgH5O3z6g==/com.ecemsuren.cicdproject.dev.test-C_WjFGG2-fWx1GyHJn19DA==/base.dm': No such file or directory
+08-05 14:41:00.970 20101 20101 D nativeloader: Configuring clns-8 for other apk /data/app/~~y4kfb56jvCbLcFgH5O3z6g==/com.ecemsuren.cicdproject.dev.test-C_WjFGG2-fWx1GyHJn19DA==/base.apk. target_sdk_version=35, uses_libraries=, library_path=/data/app/~~y4kfb56jvCbLcFgH5O3z6g==/com.ecemsuren.cicdproject.dev.test-C_WjFGG2-fWx1GyHJn19DA==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.ecemsuren.cicdproject.dev.test
+08-05 14:41:00.988 20101 20101 V GraphicsEnvironment: Currently set values for:
+08-05 14:41:00.988 20101 20101 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+08-05 14:41:00.988 20101 20101 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+08-05 14:41:00.989 20101 20101 V GraphicsEnvironment: ANGLE GameManagerService for com.ecemsuren.cicdproject.dev.test: false
+08-05 14:41:00.989 20101 20101 V GraphicsEnvironment: com.ecemsuren.cicdproject.dev.test is not listed in per-application setting
+08-05 14:41:00.989 20101 20101 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+08-05 14:41:01.026 20101 20122 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+08-05 14:41:01.029 20101 20122 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+08-05 14:41:01.035 20101 20122 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+08-05 14:41:01.055 14943 15072 I Finsky  : [73] WM::SCH: Logging work initialize for 37-47
+08-05 14:41:01.106 14943 15095 I Finsky  : [79] SCH: Scheduling phonesky job Id: 37-47, CT: 1785930050909, Constraints: [{ L: 0, D: 0, C: CHARGING_NONE, I: IDLE_NONE, N: NET_NONE, B: BATTERY_ANY }, { L: 0, D: 0, C: CHARGING_NONE, I: IDLE_NONE, N: NET_NONE, B: BATTERY_ANY }]
+08-05 14:41:01.115 14943 15100 I Finsky  : [83] SCH: Scheduling 0 system job(s)
+08-05 14:41:01.145 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@e452ce6 in: STOPPED
+08-05 14:41:01.145 20057 20057 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.ecemsuren.cicdproject.MainActivity@e452ce6
+08-05 14:41:01.145 20101 20101 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10220; state: DISABLED
+08-05 14:41:01.155 20101 20101 W OpenGLRenderer: Unknown dataspace 0
+08-05 14:41:01.212   386   386 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+08-05 14:41:01.223 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@e452ce6 in: DESTROYED
+08-05 14:41:01.224 20057 20057 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+08-05 14:41:01.225   386   477 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10220 pid=0
+08-05 14:41:01.225   386   477 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10220 => denied (905 us)
+08-05 14:41:01.225   386   477 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10220 pid=0
+08-05 14:41:01.225   386   477 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10220 => denied (389 us)
+08-05 14:41:01.225   386   854 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10220 pid=20101
+08-05 14:41:01.225   386   854 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10220 => denied (471 us)
+08-05 14:41:01.227 20057 20057 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@a1476bc
+08-05 14:41:01.231   386   477 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10220 pid=0
+08-05 14:41:01.231   386   477 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10220 => denied (6123 us)
+08-05 14:41:01.231   386   854 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10220 pid=20101
+08-05 14:41:01.231   386   854 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10220 => denied (6182 us)
+08-05 14:41:01.235   522  2047 W InputManager-JNI: Input channel object '3e361 com.ecemsuren.cicdproject.dev/com.ecemsuren.cicdproject.MainActivity (client)' was disposed without first being removed with the input manager!
+08-05 14:41:01.239   865   865 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+08-05 14:41:01.267 20101 20120 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+08-05 14:41:01.268 20101 20120 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+08-05 14:41:01.285 20057 20078 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@3d56ef8]
+08-05 14:41:01.287 20057 20078 I TestRunner: finished: loginScreen_emptyFields_showsErrors(com.ecemsuren.cicdproject.LoginScreenUiTest)

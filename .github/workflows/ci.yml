@@ -37,8 +37,16 @@ jobs:
       - name: Run Prod Unit Tests
         run: ./gradlew testProdDebugUnitTest --no-daemon
 
+      - name: Run UI Tests on Android Emulator
+        uses: ReactiveCircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          script: ./gradlew connectedDevDebugAndroidTest --no-daemon
+
       - name: Build Dev Debug APK Check
         run: ./gradlew assembleDevDebug --no-daemon
 
       - name: Build Prod Debug APK Check
         run: ./gradlew assembleProdDebug --no-daemon
+
+
