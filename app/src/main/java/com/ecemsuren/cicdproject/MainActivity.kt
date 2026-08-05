@@ -15,8 +15,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             CiCdProjectTheme {
                 LoginScreen(
-                    onLoginClick = { username, _ ->
-                        Toast.makeText(this, "Giriş yapıldı: $username", Toast.LENGTH_SHORT).show()
+                    onLoginSuccess = {
+                        Toast.makeText(this, "Giriş Başarılı!", Toast.LENGTH_SHORT).show()
                     }
                 )
             }

@@ -1,0 +1,120 @@
+# 2026-08-05T11:41:05.955398Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 2
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "LoginScreenUiTest"
+    test_package: "com.ecemsuren.cicdproject"
+    test_method: "loginScreen_emptyFields_showsErrors"
+    start_time {
+      seconds: 1785930054
+      nanos: 744000000
+    }
+    end_time {
+      seconds: 1785930061
+      nanos: 445000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/outputs/androidTest-results/connected/debug/flavors/dev/Medium_Phone_API_34(AVD) - 14/logcat-com.ecemsuren.cicdproject.LoginScreenUiTest-loginScreen_emptyFields_showsErrors.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/outputs/androidTest-results/connected/debug/flavors/dev/Medium_Phone_API_34(AVD) - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/outputs/androidTest-results/connected/debug/flavors/dev/Medium_Phone_API_34(AVD) - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/outputs/androidTest-results/connected/debug/flavors/dev/Medium_Phone_API_34(AVD) - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "LoginScreenUiTest"
+    test_package: "com.ecemsuren.cicdproject"
+    test_method: "loginScreen_displaysAllElements"
+    start_time {
+      seconds: 1785930061
+      nanos: 477000000
+    }
+    end_time {
+      seconds: 1785930063
+      nanos: 930000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/outputs/androidTest-results/connected/debug/flavors/dev/Medium_Phone_API_34(AVD) - 14/logcat-com.ecemsuren.cicdproject.LoginScreenUiTest-loginScreen_displaysAllElements.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/outputs/androidTest-results/connected/debug/flavors/dev/Medium_Phone_API_34(AVD) - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/outputs/androidTest-results/connected/debug/flavors/dev/Medium_Phone_API_34(AVD) - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/outputs/androidTest-results/connected/debug/flavors/dev/Medium_Phone_API_34(AVD) - 14/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/outputs/androidTest-results/connected/debug/flavors/dev/Medium_Phone_API_34(AVD) - 14/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

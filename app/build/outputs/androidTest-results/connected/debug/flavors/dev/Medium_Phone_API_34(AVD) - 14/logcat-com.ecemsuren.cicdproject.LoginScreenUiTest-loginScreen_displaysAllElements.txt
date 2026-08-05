@@ -1,0 +1,78 @@
+08-05 14:41:01.294 20057 20078 I TestRunner: started: loginScreen_displaysAllElements(com.ecemsuren.cicdproject.LoginScreenUiTest)
+08-05 14:41:01.297   152   152 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+08-05 14:41:01.298 20101 20120 I Gralloc4: mapper 4.x is not supported
+08-05 14:41:01.300 20057 20078 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@f4732f6]
+08-05 14:41:01.311 20057 20078 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+08-05 14:41:01.313 20101 20120 E OpenGLRenderer: Unable to match the desired swap behavior.
+08-05 14:41:01.412   522  2047 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10220 pid=0
+08-05 14:41:01.412   865   959 E OpenGLRenderer: Unable to match the desired swap behavior.
+08-05 14:41:01.413   522  2047 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10220 => denied (1615 us)
+08-05 14:41:01.414   522  2047 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10220 pid=0
+08-05 14:41:01.414   522  2047 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10220 => denied (1007 us)
+08-05 14:41:01.414   522  2047 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10220 pid=0
+08-05 14:41:01.414   522  2047 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10220 => denied (220 us)
+08-05 14:41:01.481 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@6dda5da in: PRE_ON_CREATE
+08-05 14:41:01.483 20057 20057 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+08-05 14:41:01.516 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@6dda5da in: CREATED
+08-05 14:41:01.517 20057 20057 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.ecemsuren.cicdproject.MainActivity@6dda5da
+08-05 14:41:01.521 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@6dda5da in: STARTED
+08-05 14:41:01.522 20057 20057 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.ecemsuren.cicdproject.MainActivity@6dda5da
+08-05 14:41:01.524 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@6dda5da in: RESUMED
+08-05 14:41:01.527 20057 20057 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.ecemsuren.cicdproject.MainActivity@6dda5da
+08-05 14:41:01.746 20057 20080 E OpenGLRenderer: Unable to match the desired swap behavior.
+08-05 14:41:01.772   865   929 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@3c4c03e
+08-05 14:41:01.773   522  2045 W InputManager-JNI: Input channel object '59ed423 Splash Screen com.ecemsuren.cicdproject.dev.test (client)' was disposed without first being removed with the input manager!
+08-05 14:41:01.814   522   538 W ziparchive: Unable to open '/data/app/~~yl4Pcp3G4h3kV8LiwV0D9g==/com.ecemsuren.cicdproject.dev-6kLDbZvxvhLHSYRMyiTXGQ==/base.dm': No such file or directory
+08-05 14:41:01.817   522   538 I ActivityTaskManager: Displayed com.ecemsuren.cicdproject.dev/com.ecemsuren.cicdproject.MainActivity for user 0: +486ms
+08-05 14:41:01.835   522  2047 I ImeTracker: com.ecemsuren.cicdproject.dev:976d55fa: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+08-05 14:41:01.836   522  2047 I ImeTracker: com.ecemsuren.cicdproject.dev:976d55fa: onCancelled at PHASE_SERVER_SHOULD_HIDE
+08-05 14:41:01.837  9560  9560 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+08-05 14:41:01.838  9560  9560 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+08-05 14:41:01.838  9560  9560 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.ecemsuren.cicdproject.dev fieldId=0 fieldName=null extras=null}, false)
+08-05 14:41:01.838  9560  9560 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+08-05 14:41:01.839  9560  9560 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+08-05 14:41:01.856   865   959 E OpenGLRenderer: Unable to match the desired swap behavior.
+08-05 14:41:01.884   865   959 D EGL_emulation: app_time_stats: avg=1798.36ms min=1798.36ms max=1798.36ms count=1
+08-05 14:41:01.889   865   959 D EGL_emulation: app_time_stats: avg=264.44ms min=13.27ms max=2678.92ms count=11
+08-05 14:41:02.063 20101 20101 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@f1703e0
+08-05 14:41:02.065   522  2045 W InputManager-JNI: Input channel object 'acc8c7b com.ecemsuren.cicdproject.dev.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+08-05 14:41:02.149   865   929 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@8e573c6
+08-05 14:41:02.151   522  2048 W InputManager-JNI: Input channel object '61ab9c8 Splash Screen com.ecemsuren.cicdproject.dev (client)' was disposed without first being removed with the input manager!
+08-05 14:41:02.203 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@6dda5da in: PAUSED
+08-05 14:41:02.205 20057 20057 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.ecemsuren.cicdproject.MainActivity@6dda5da
+08-05 14:41:02.259   386   386 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+08-05 14:41:02.259   865   959 E OpenGLRenderer: Unable to match the desired swap behavior.
+08-05 14:41:02.904 20101 20120 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+08-05 14:41:02.909   865   959 D EGL_emulation: app_time_stats: avg=93.00ms min=5.05ms max=367.84ms count=8
+08-05 14:41:02.910 20101 20120 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+08-05 14:41:03.046 20101 20120 E OpenGLRenderer: Unable to match the desired swap behavior.
+08-05 14:41:03.111   522   538 W ziparchive: Unable to open '/data/app/~~y4kfb56jvCbLcFgH5O3z6g==/com.ecemsuren.cicdproject.dev.test-C_WjFGG2-fWx1GyHJn19DA==/base.dm': No such file or directory
+08-05 14:41:03.148 20101 20114 I OpenGLRenderer: Davey! duration=770ms; Flags=1, FrameTimelineVsyncId=30264152, IntendedVsync=201784566970185, Vsync=201784666970181, InputEventId=0, HandleInputStart=201784679702012, AnimationStart=201784679710637, PerformTraversalsStart=201784679713762, DrawStart=201785291780595, FrameDeadline=201784583636851, FrameInterval=201784675326720, FrameStartTime=16666666, SyncQueued=201785297027845, SyncStart=201785298431887, IssueDrawCommandsStart=201785299540095, SwapBuffers=201785311183429, FrameCompleted=201785338512304, DequeueBufferDuration=6291, QueueBufferDuration=1072250, GpuCompleted=201785338445595, SwapBuffersCompleted=201785338512304, DisplayPresentTime=0, CommandSubmissionCompleted=201785311183429,
+08-05 14:41:03.162   522   538 I ActivityTaskManager: Displayed com.ecemsuren.cicdproject.dev.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +922ms
+08-05 14:41:03.197 20101 20101 I Choreographer: Skipped 34 frames!  The application may be doing too much work on its main thread.
+08-05 14:41:03.244   386   386 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+08-05 14:41:03.446 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@6dda5da in: STOPPED
+08-05 14:41:03.448 20057 20057 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.ecemsuren.cicdproject.MainActivity@6dda5da
+08-05 14:41:03.487 18688 18708 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+08-05 14:41:03.491 18688 18708 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+08-05 14:41:03.548   865   929 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@4641080
+08-05 14:41:03.553   522  3022 W InputManager-JNI: Input channel object '738e170 Splash Screen com.ecemsuren.cicdproject.dev.test (client)' was disposed without first being removed with the input manager!
+08-05 14:41:03.583 18688 18708 E OpenGLRenderer: Unable to match the desired swap behavior.
+08-05 14:41:03.599   865   929 W FrameTracker: Missed App frame:UNKNOWN: 10, 30264378, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:41:03.599   865   929 W FrameTracker: Missed SF frame:UNKNOWN: 10, 30264378, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:41:03.599   865   929 W FrameTracker: Missing HWUI jank callback for vsyncId: 30264378, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:41:03.599   865   929 W FrameTracker: Missed App frame:UNKNOWN: 74, 30264401, 107041654, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:41:03.599   865   929 W FrameTracker: Missed SF frame:UNKNOWN: 74, 30264401, 107041654, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:41:03.599   865   929 W FrameTracker: Missed App frame:UNKNOWN: 74, 30264425, 92469864, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:41:03.599   865   929 W FrameTracker: Missed SF frame:UNKNOWN: 74, 30264425, 92469864, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:41:03.599   865   929 W FrameTracker: Missed App frame:UNKNOWN: 74, 30264440, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:41:03.599   865   929 W FrameTracker: Missed SF frame:UNKNOWN: 74, 30264440, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:41:03.599   865   929 W FrameTracker: Missing HWUI jank callback for vsyncId: 30264440, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:41:03.599   865   929 W FrameTracker: Missed App frame:UNKNOWN: 74, 30264456, 90051200, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:41:03.599   865   929 W FrameTracker: Missed SF frame:UNKNOWN: 74, 30264456, 90051200, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+08-05 14:41:03.613 20057 20057 D LifecycleMonitor: Lifecycle status change: com.ecemsuren.cicdproject.MainActivity@6dda5da in: DESTROYED
+08-05 14:41:03.614 20057 20057 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+08-05 14:41:03.677 20057 20078 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@f4732f6]
+08-05 14:41:03.680 20057 20057 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@2ffa45d
+08-05 14:41:03.708   522  3022 W InputManager-JNI: Input channel object 'c29476a com.ecemsuren.cicdproject.dev/com.ecemsuren.cicdproject.MainActivity (client)' was disposed without first being removed with the input manager!
+08-05 14:41:03.765 20057 20078 I TestRunner: finished: loginScreen_displaysAllElements(com.ecemsuren.cicdproject.LoginScreenUiTest)

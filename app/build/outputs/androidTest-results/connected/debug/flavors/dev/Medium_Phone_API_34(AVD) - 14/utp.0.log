@@ -1,0 +1,44 @@
+INFO: Constructing runner from config.
+INFO: Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "com.ecemsuren.cicdproject.dev"
+    test_package: "com.ecemsuren.cicdproject.dev.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/com.ecemsuren.cicdproject.dev/additional_test_output"
+    }
+    args_map {
+      key: "class"
+      value: "com.ecemsuren.cicdproject.LoginScreenUiTest"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+INFO: Configuring AndroidTestApkInstallerPlugin: apks_to_install {
+  apk_paths: "/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/intermediates/apk/dev/debug/app-dev-debug.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+apks_to_install {
+  apk_paths: "/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/intermediates/apk/androidTest/dev/debug/app-dev-debug-androidTest.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+
+INFO: No installables found in test fixture. Nothing to install.
+INFO: Installing [/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/intermediates/apk/dev/debug/app-dev-debug.apk] on device emulator-5554.
+INFO: Installing [/Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/intermediates/apk/androidTest/dev/debug/app-dev-debug-androidTest.apk] on device emulator-5554.
+INFO: Start logcat streaming.
+INFO: Running Android Instrumentation driver.
+INFO: Copying files from device to host: /sdcard/Android/media/com.ecemsuren.cicdproject.dev/additional_test_output to /Users/ecem.suren/PersonalProjects/ci-cd-project/app/build/outputs/connected_android_test_additional_output/devDebugAndroidTest/connected/Medium_Phone_API_34(AVD) - 14
+INFO: Stop logcat streaming.
+INFO: Uninstalling com.ecemsuren.cicdproject.dev for device emulator-5554.
+INFO: Uninstalling com.ecemsuren.cicdproject.dev.test for device emulator-5554.
+INFO: Execute com.ecemsuren.cicdproject.LoginScreenUiTest.loginScreen_emptyFields_showsErrors: PASSED
+INFO: Execute com.ecemsuren.cicdproject.LoginScreenUiTest.loginScreen_displaysAllElements: PASSED
