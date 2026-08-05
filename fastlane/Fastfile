@@ -5,7 +5,7 @@ platform :android do
   desc "Build and Deploy Dev Release APK to Firebase App Distribution"
   lane :deploy_dev do
 
-    changelog = sh("git log --pretty=format:'- %s' --no-merges HEAD^1..HEAD^2").strip rescue sh("git log --pretty=format:'- %s' --no-merges -n 5").strip
+    changelog = sh("git log --pretty=format:'- %s' --no-merges HEAD^1..HEAD^2").strip
 
     gradle(
       task: "assemble",
@@ -24,7 +24,7 @@ platform :android do
   desc "Build and Deploy Prod Release APK to Firebase App Distribution"
   lane :deploy_prod do
 
-    changelog = sh("git log --pretty=format:'- %s' --no-merges HEAD^1..HEAD^2").strip rescue sh("git log --pretty=format:'- %s' --no-merges -n 5").strip
+    changelog = sh("git log --pretty=format:'- %s' --no-merges HEAD^1..HEAD^2").strip
 
     gradle(
       task: "assemble",
