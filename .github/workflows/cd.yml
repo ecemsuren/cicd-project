@@ -1,5 +1,5 @@
 # CI/CD Pipeline — Android Build, Test & Fastlane Deployment to Firebase
-name: CI/CD Pipeline
+name: CD
 
 on:
   push:
@@ -13,8 +13,7 @@ jobs:
 
   # DEPLOY DEV
   deploy-dev:
-    name: 🚀 Deploy Dev (Firebase)
-    needs: test
+    name: 🚀 Deploy Dev
     if: github.ref == 'refs/heads/development'
     runs-on: ubuntu-latest
 
@@ -56,8 +55,7 @@ jobs:
 
   # DEPLOY PROD
   deploy-prod:
-    name: 🚀 Deploy Prod (Firebase)
-    needs: test
+    name: 🚀 Deploy Prod
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
 
