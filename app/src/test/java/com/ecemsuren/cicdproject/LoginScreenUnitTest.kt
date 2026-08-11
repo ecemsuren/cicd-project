@@ -14,7 +14,7 @@ class LoginScreenUnitTest {
     fun emailValidation_validEmail_returnsTrue() {
         val email = "user@example.com"
         val isValid = email.contains("@") && email.endsWith(".com")
-        assertTrue("Failing test intentionally for CI validation", false)
+        assertTrue(isValid)
     }
 
     @Test
