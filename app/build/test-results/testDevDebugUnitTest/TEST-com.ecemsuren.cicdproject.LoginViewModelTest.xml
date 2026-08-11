@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ecemsuren.cicdproject.LoginViewModelTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-08-11T07:12:04" hostname="JKYWMF270C" time="0.005">
+  <properties/>
+  <testcase name="initialState_isEmpty" classname="com.ecemsuren.cicdproject.LoginViewModelTest" time="0.004"/>
+  <testcase name="onLoginClicked_emptyFields_setsErrorMessages" classname="com.ecemsuren.cicdproject.LoginViewModelTest" time="0.0"/>
+  <testcase name="onLoginClicked_validFields_setsSuccessTrue" classname="com.ecemsuren.cicdproject.LoginViewModelTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
