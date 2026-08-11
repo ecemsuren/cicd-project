@@ -52,7 +52,7 @@ jobs:
         env:
           BUILD_NUMBER: ${{ github.run_number }}
           FIREBASE_APP_ID_DEV: ${{ secrets.FIREBASE_APP_ID_DEV }}
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEYSTORE_PASSWORD: "INVALID_KEYSTORE_PASSWORD_TEST"
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
 
@@ -97,6 +97,6 @@ jobs:
         env:
           BUILD_NUMBER: ${{ github.run_number }}
           FIREBASE_APP_ID_PROD: ${{ secrets.FIREBASE_APP_ID_PROD }}
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEYSTORE_PASSWORD: "INVALID_KEYSTORE_PASSWORD_TEST"
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
