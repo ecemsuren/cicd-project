@@ -1,6 +1,6 @@
 # Bitbucket Pipelines Configuration for Android CI/CD
 
-image: openjdk:17-jdk-slim
+image: mingc/android-build-box:latest
 
 options:
   max-time: 30
