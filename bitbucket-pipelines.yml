@@ -1,0 +1,48 @@
+# Bitbucket Pipelines Configuration for Android CI/CD
+
+image: openjdk:17-jdk-slim
+
+options:
+  max-time: 30
+
+definitions:
+  caches:
+    gradle: ~/.gradle/caches
+
+pipelines:
+  # Runs on Pull Requests
+  pull-requests:
+    '**':
+      - step:
+          name: Unit Tests & Build Verification
+          caches:
+            - gradle
+          script:
+            - chmod +x gradlew
+            - ./gradlew testDevDebugUnitTest --no-daemon
+            - ./gradlew testProdDebugUnitTest --no-daemon
+            - ./gradlew assembleDevDebug --no-daemon
+            - ./gradlew assembleProdDebug --no-daemon
+
+  # Runs on pushes to development branch
+  branches:
+    development:
+      - step:
+          name: Build & Test Dev
+          caches:
+            - gradle
+          script:
+            - chmod +x gradlew
+            - ./gradlew testDevDebugUnitTest --no-daemon
+            - ./gradlew assembleDevDebug --no-daemon
+
+    # Runs on pushes to master branch
+    master:
+      - step:
+          name: Build & Test Prod
+          caches:
+            - gradle
+          script:
+            - chmod +x gradlew
+            - ./gradlew testProdDebugUnitTest --no-daemon
+            - ./gradlew assembleProdDebug --no-daemon
