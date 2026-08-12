@@ -1,0 +1,60 @@
+# Bitbucket Pipelines Configuration for Android CI/CD
+
+image: mingc/android-build-box:latest
+
+options:
+  max-time: 30
+
+definitions:
+  caches:
+    gradle: ~/.gradle/caches
+
+pipelines:
+  # Runs on Pull Requests
+  pull-requests:
+    '**':
+      - step:
+          name: Unit Tests & Build Verification
+          caches:
+            - gradle
+          script:
+            - chmod +x gradlew
+            - ./gradlew testDevDebugUnitTest --no-daemon
+            - ./gradlew testProdDebugUnitTest --no-daemon
+            - ./gradlew assembleDevDebug --no-daemon
+            - ./gradlew assembleProdDebug --no-daemon
+
+  # Runs on pushes to development branch
+  branches:
+    development:
+      - step:
+          name: Build & Test Dev
+          caches:
+            - gradle
+          script:
+            - chmod +x gradlew
+            - ./gradlew testDevDebugUnitTest --no-daemon
+            - ./gradlew assembleDevDebug --no-daemon
+
+    # Runs on pushes to master branch
+    master:
+      - step:
+          name: Build & Test Prod
+          caches:
+            - gradle
+          script:
+            - chmod +x gradlew
+            - ./gradlew testProdDebugUnitTest --no-daemon
+            - ./gradlew assembleProdDebug --no-daemon
+
+  # Manual Triggers (Runnable via Bitbucket UI "Run Pipeline" button)
+  custom:
+    manual-build-and-test:
+      - step:
+          name: Manual Build & Test
+          caches:
+            - gradle
+          script:
+            - chmod +x gradlew
+            - ./gradlew testDevDebugUnitTest --no-daemon
+            - ./gradlew assembleDevDebug --no-daemon
