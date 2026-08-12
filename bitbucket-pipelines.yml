@@ -46,3 +46,15 @@ pipelines:
             - chmod +x gradlew
             - ./gradlew testProdDebugUnitTest --no-daemon
             - ./gradlew assembleProdDebug --no-daemon
+
+  # Manual Triggers (Runnable via Bitbucket UI "Run Pipeline" button)
+  custom:
+    manual-build-and-test:
+      - step:
+          name: Manual Build & Test
+          caches:
+            - gradle
+          script:
+            - chmod +x gradlew
+            - ./gradlew testDevDebugUnitTest --no-daemon
+            - ./gradlew assembleDevDebug --no-daemon
