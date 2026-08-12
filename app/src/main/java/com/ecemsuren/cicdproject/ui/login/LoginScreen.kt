@@ -14,24 +14,28 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun LoginScreen(
-    onLoginClick: (username: String, password: String) -> Unit = { _, _ -> }
+    viewModel: LoginViewModel = viewModel(),
+    onLoginSuccess: () -> Unit = {}
 ) {
-    var username by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
+    val uiState by viewModel.uiState.collectAsState()
+
+    if (uiState.isSuccess) {
+        onLoginSuccess()
+    }
 
     Surface(
         modifier = Modifier.fillMaxSize(),
@@ -45,7 +49,7 @@ fun LoginScreen(
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "Giriş Yap",
+                text = "Hoş Geldiniz",
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.primary
@@ -53,36 +57,62 @@ fun LoginScreen(
 
             Spacer(modifier = Modifier.height(32.dp))
 
-            // 1. Edit Text: Kullanıcı Adı / E-posta
             OutlinedTextField(
-                value = username,
-                onValueChange = { username = it },
+                value = uiState.emailInput,
+                onValueChange = viewModel::onEmailChanged,
                 label = { Text("Kullanıcı Adı") },
                 singleLine = true,
-                modifier = Modifier.fillMaxWidth()
+                isError = uiState.emailError != null,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .testTag("email_input")
             )
+
+            uiState.emailError?.let { error ->
+                Text(
+                    text = error,
+                    color = MaterialTheme.colorScheme.error,
+                    fontSize = 12.sp,
+                    modifier = Modifier
+                        .align(Alignment.Start)
+                        .padding(start = 4.dp, top = 4.dp)
+                )
+            }
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // 2. Edit Text: Şifre
             OutlinedTextField(
-                value = password,
-                onValueChange = { password = it },
+                value = uiState.passwordInput,
+                onValueChange = viewModel::onPasswordChanged,
                 label = { Text("Şifre") },
                 singleLine = true,
+                isError = uiState.passwordError != null,
                 visualTransformation = PasswordVisualTransformation(),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .testTag("password_input")
             )
+
+            uiState.passwordError?.let { error ->
+                Text(
+                    text = error,
+                    color = MaterialTheme.colorScheme.error,
+                    fontSize = 12.sp,
+                    modifier = Modifier
+                        .align(Alignment.Start)
+                        .padding(start = 4.dp, top = 4.dp)
+                )
+            }
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // 1. Buton: Giriş Yap
             Button(
-                onClick = { onLoginClick(username, password) },
+                onClick = viewModel::onLoginClicked,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp)
+                    .testTag("login_button")
             ) {
                 Text(
                     text = "Giriş Yap",
