@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import com.ecemsuren.cicdproject.ui.login.LoginScreen
 import com.ecemsuren.cicdproject.ui.theme.CiCdProjectTheme
 
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
