@@ -14,7 +14,7 @@ platform :android do
     )
 
     firebase_app_distribution(
-      app: ENV["FIREBASE_APP_ID_DEV"],
+      app: ENV["FIREBASE_APP_ID"],
       service_credentials_file: "firebase-service-account.json",
       groups: "testers",
       release_notes: "Dev Build (v1.0.#{ENV['BUILD_NUMBER']})\n\nChanges in this release:\n#{changelog}"
@@ -33,7 +33,7 @@ platform :android do
     )
 
     firebase_app_distribution(
-      app: ENV["FIREBASE_APP_ID_PROD"],
+      app: ENV["FIREBASE_APP_ID"],
       service_credentials_file: "firebase-service-account.json",
       groups: "stakeholders",
       release_notes: "Prod Build (v1.0.#{ENV['BUILD_NUMBER']})\n\nChanges in this release:\n#{changelog}"
