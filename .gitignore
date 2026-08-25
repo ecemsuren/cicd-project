@@ -1,0 +1,19 @@
+# Android / Gradle
+.gradle/
+build/
+app/build/
+
+# Local configuration
+local.properties
+keystore.properties
+.secrets/
+
+# Generated credentials / signing artifacts
+firebase-service-account.json
+app/release-keystore.jks
+
+# IDE / OS
+.idea/
+*.iml
+.DS_Store
+
